@@ -1,4 +1,6 @@
 import math
+import checkInput
+import checkWin
 
 
 def printing(board):
@@ -34,56 +36,26 @@ def changeTurn(turn):
         return 0
 
 
-def checkOutOfBound(playerInput):
-    if playerInput.isdigit() == 0:
-        return 0
-    else:
-        if int(playerInput) < 1 or int(playerInput) > 9:
-            return 0
-        else:
-            return 1
-
-
-def checkFree(board, row, collumn):
-    if board[row][collumn] == "X" or board[row][collumn] == "0":
-        return 0
-    else:
-        return 1
-
-
 def game(board, Xor0, turn):
     roundCounter = 0
     while roundCounter < 9:
         printing(board)
         playerInput = input("Position to place : ")
-        while checkOutOfBound(playerInput) == 0:
+        while checkInput.checkOutOfBound(playerInput) == 0:
             playerInput = input("Wrong choice, pick again : ")
         row = getRow(playerInput)
         collumn = getCollumn(playerInput)
 
-        while checkFree(board, row, collumn) == 0:
+        while checkInput.checkFree(board, row, collumn) == 0:
             playerInput = input("Position already used, try again : ")
-            while checkOutOfBound(playerInput) == 0:
+            while checkInput.checkOutOfBound(playerInput) == 0:
                 playerInput = input("Wrong position, pick again : ")
             row = getRow(playerInput)
             collumn = getCollumn(playerInput)
 
         board[row][collumn] = Xor0[turn]
         roundCounter += 1
+        winFlag = checkWin.checkWin(board)
+        print(winFlag)
         turn = changeTurn(turn)
-        printing(board)
 
-
-def main():
-    turn = 0
-    Xor0 = ["X", "0"]
-    print("\n  Tic Tac Toe")
-    board = [
-        ["1", "2", "3"],
-        ["4", "5", "6"],
-        ["7", "8", "9"]
-    ]
-    game(board,Xor0,turn)
-
-
-main()
