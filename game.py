@@ -1,5 +1,5 @@
-import math
-
+import numberToMatrix
+import ai
 import bot
 import checkInput
 import checkWin
@@ -16,22 +16,6 @@ def printing(board):
     print("  -----------" + "\n")
 
 
-def getRow(playerInput):
-    if 4 > int(playerInput) > 0:
-        return 0
-    if 7 > int(playerInput) > 3:
-        return 1
-    if 10 > int(playerInput) > 6:
-        return 2
-
-
-def getCollumn(playerInput):
-    collumn = math.floor(int(playerInput)) % 3 - 1
-    if collumn == -1:
-        collumn = 2
-    return collumn
-
-
 def changeTurn(turn):
     if turn == 0:
         return 1
@@ -39,63 +23,110 @@ def changeTurn(turn):
         return 0
 
 
-def game(board, Xor0, turn):
+def resetBoard():
+    board = [
+        ["1", "2", "3"],
+        ["4", "5", "6"],
+        ["7", "8", "9"]
+    ]
+    return board
+
+
+def game():
     botWins = 0
     playerWins = 0
-
-    preGamePrint.prePrint()
-    choice = input("Your choice : ")
-    if (choice == 0):
-        return
-    else:
-        preGamePrint.dificultyPrint()
-        difficultyChoice = input("Your choice : ")
+    Xor0 = ["X", "0"]
+    while 1:
+        #Game initialize
+        turn = 0
+        board = resetBoard()
+        preGamePrint.prePrint()
         roundCounter = 0
         winFlag = 0
-        printing(board)
-        while roundCounter < 9 and winFlag == 0:
-            if turn == 0:
-                playerInput = input("Position to place : ")
-                while checkInput.checkOutOfBound(playerInput) == 0:
-                    playerInput = input("Wrong choice, pick again : ")
-                row = getRow(playerInput)
-                collumn = getCollumn(playerInput)
+        isBotSmart = 0
+        ###End Game initialize
 
-                while checkInput.checkFree(board, row, collumn) == 0:
-                    playerInput = input("Position already used, try again : ")
+        #Start Game choices
+        choice = input("Your choice : ")
+        while checkInput.quitOrPlay(choice) == 0:
+            choice = input("Wrong number , try again : ")
+        if choice == "1":
+            preGamePrint.dificultyPrint()
+            difficultyChoice = input("Your choice : ")
+            while checkInput.difficultyCheck(difficultyChoice) == 0:
+                difficultyChoice = input("Wrong number , try again : ")
+            ###End Start Game choices
+            printing(board)
+            #Actual game
+            while roundCounter < 9 and winFlag == 0:
+                #Player Choice
+                if turn == 0:
+                    playerInput = input("Position to place : ")
                     while checkInput.checkOutOfBound(playerInput) == 0:
-                        playerInput = input("Wrong position, pick again : ")
-                    row = getRow(playerInput)
-                    collumn = getCollumn(playerInput)
+                        playerInput = input("Wrong choice, pick again : ")
+                    row = numberToMatrix.getRow(playerInput)
+                    collumn = numberToMatrix.getCollumn(playerInput)
 
-                board[row][collumn] = Xor0[turn]
+                    while checkInput.checkFree(board, row, collumn) == 0:
+                        playerInput = input("Position already used, try again : ")
+                        while checkInput.checkOutOfBound(playerInput) == 0:
+                            playerInput = input("Wrong position, pick again : ")
+                        row = numberToMatrix.getRow(playerInput)
+                        collumn = numberToMatrix.getCollumn(playerInput)
 
-                roundCounter += 1
-                winFlag = checkWin.checkWin(board)
-                turn = changeTurn(turn)
+                    board[row][collumn] = Xor0[turn]
+
+                    roundCounter += 1
+                    winFlag = checkWin.checkWin(board)
+                    turn = changeTurn(turn)
+                    ###Player Choice
+                else:
+                    #Bot Choice
+                    if difficultyChoice == "1":
+                        row, collumn = bot.play_random(board)
+                    else:
+                        if difficultyChoice == "2":
+                            if isBotSmart == 0:
+                                row, collumn = bot.play_random(board)
+                                isBotSmart = 1
+                            else:
+                                aiChoice = ai.aiChoice(board, roundCounter)
+                                row = numberToMatrix.getRow(aiChoice)
+                                collumn = numberToMatrix.getCollumn(aiChoice)
+                                isBotSmart = 0
+                        else:
+                            aiChoice = ai.aiChoice(board, roundCounter)
+                            print(aiChoice)
+                            row = numberToMatrix.getRow(aiChoice)
+                            collumn = numberToMatrix.getCollumn(aiChoice)
+                            isBotSmart = 0
+                    board[row][collumn] = Xor0[turn]
+                    printing(board)
+                    roundCounter += 1
+                    winFlag = checkWin.checkWin(board)
+                    turn = changeTurn(turn)
+                    ###End Bot Choice
+            #EndGame Stats
+            print("\n\n=====ENDGAME=====")
+            printing(board)
+            if winFlag == 0:
+                print("\n===Tie===\n")
+                print("Player Wins : " + str(playerWins))
+                print("Bot Wins : " + str(botWins))
             else:
-                row, collumn = bot.play_random(board)
-                board[row][collumn] = Xor0[turn]
-                printing(board)
-                roundCounter += 1
-                winFlag = checkWin.checkWin(board)
                 turn = changeTurn(turn)
-
-        print("\n\n=====ENDGAME=====")
-        printing(board)
-        if winFlag == 0:
-            print("\n Tie \n")
-            print("Player Wins : " + str(playerWins))
-            print("Bot Wins : " + str(botWins))
+                if turn == 0:
+                    playerWins += 1
+                    print("\n===Player Wins===\n")
+                    print("Player Wins : " + str(playerWins))
+                    print("Bot Wins : " + str(botWins))
+                else:
+                    botWins += 1
+                    print("\n===Bot Wins===\n")
+                    print("Player Wins : " + str(playerWins))
+                    print("Bot Wins : " + str(botWins))
+                    print()
+                    print()
+                ###End EndGame Stats
         else:
-            turn = changeTurn(turn)
-            if turn == 0:
-                playerWins += 1
-                print("\n===Player Wins===\n")
-                print("Player Wins : " + str(playerWins))
-                print("Bot Wins : " + str(botWins))
-            else:
-                botWins += 1
-                print("\n Player Wins \n")
-                print("Player Wins : " + str(playerWins))
-                print("Bot Wins : " + str(botWins))
+            return

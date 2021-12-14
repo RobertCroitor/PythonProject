@@ -1,14 +1,13 @@
 
-
-
 def prePrint():
     print("======TIC TAC TOE=======")
     print()
     print("This is the game menu")
     print()
     print("To play one round , insert 1 ")
-    print("To quit , insert anything other than 1")
+    print("To quit , insert 2")
     print()
+
 
 def dificultyPrint():
     print()
@@ -19,3 +18,4 @@ def dificultyPrint():
     print("For easy mode , insert 1")
     print("For medium mode , insert 2")
     print("For hard mode , insert 3")
+    print()
