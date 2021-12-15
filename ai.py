@@ -99,12 +99,12 @@ def aiChoice(board, roundCounter):
                 if board[0][1] != "X" and board[0][1] != "0" and board[0][2] != "X" and board[0][2] != "0":
                     return 3
                 if board[1][0] != "X" and board[1][0] != "0" and board[2][0] != "X" and board[2][0] != "0":
-                    return 5
+                    return 7
             if board[0][1] == "0":
                 if board[0][0] != "X" and board[0][0] != "0" and board[0][2] != "X" and board[0][2] != "0":
                     return 3
                 if board[1][1] != "X" and board[1][1] != "0" and board[2][1] != "X" and board[2][1] != "0":
-                    return 7
+                    return 8
             if board[0][2] == "0":
                 if board[0][1] != "X" and board[0][1] != "0" and board[0][0] != "X" and board[0][0] != "0":
                     return 1
@@ -119,7 +119,7 @@ def aiChoice(board, roundCounter):
                 if board[1][0] != "X" and board[1][0] != "0" and board[1][2] != "X" and board[1][2] != "0":
                     return 6
                 if board[0][1] != "X" and board[0][1] != "0" and board[2][1] != "X" and board[2][1] != "0":
-                    return 7
+                    return 8
             if board[1][2] == "0":
                 if board[1][1] != "X" and board[1][1] != "0" and board[1][0] != "X" and board[1][0] != "0":
                     return 4
@@ -137,18 +137,18 @@ def aiChoice(board, roundCounter):
                     return 2
             if board[2][2] == "0":
                 if board[2][1] != "X" and board[2][1] != "0" and board[2][0] != "X" and board[2][0] != "0":
-                    return 6
+                    return 7
                 if board[1][2] != "X" and board[1][2] != "0" and board[0][2] != "X" and board[0][2] != "0":
                     return 3
 
             #CHECK 2 IN ADVANCE DIAG
 
             if board[0][0] == "0":
-                if board[1][1] != "X" and board[1][1] != "0" and board[2][2] != "X" and board[2][0] != "0":
+                if board[1][1] != "X" and board[1][1] != "0" and board[2][2] != "X" and board[2][2] != "0":
                     return 9
             if board[2][2] == "0":
                 if board[1][1] != "X" and board[1][1] != "0" and board[0][0] != "X" and board[0][0] != "0":
-                    return 0
+                    return 1
             if board[1][1] == "0":
                 if board[0][0] != "X" and board[0][0] != "0" and board[2][2] != "X" and board[2][2] != "0":
                     return 1

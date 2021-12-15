@@ -96,7 +96,6 @@ def game():
                                 isBotSmart = 0
                         else:
                             aiChoice = ai.aiChoice(board, roundCounter)
-                            print(aiChoice)
                             row = numberToMatrix.getRow(aiChoice)
                             collumn = numberToMatrix.getCollumn(aiChoice)
                             isBotSmart = 0
