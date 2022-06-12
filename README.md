@@ -153,7 +153,6 @@
         <p> For routing, we used HTTP protocols</p>
         <p>For encryption we used a custom made alhorithm</p>
         <p>In order to retrieve data from the database we used the Fetch function.</p>
-        
         <p>In order to add a image, the user have to input the Image Url</p>
     </section>
    
