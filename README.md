@@ -74,16 +74,13 @@
         <h2>3. User Interface</h2>
         <p>On every page there is a navigation bar that helps the user easily navigate around our page</p>
     </section>
-    <section id="structure__landing" role="doc-structure">
-        <h3>3.1. Home Page</h3>
-        <p>This is the page that will welcome the user to our website, it presents the website and what will it do for the user, its very easy to use and has a very simple and inviting design</p>
+    <section id="structure__login" role="doc-structure">
+        <h3>3.1. Login Page</h3>
+        <p>In there, the user have to input his login creditentials in order to get acces to our webpage. Their inputs are compared to the ones presend in the user database, and if everything matches, they get acces. If something is wrong, a message will be shown so the users know what they inputed wrong. If the user does not have an account, they can use the Register Button to be redirected to the Register Page</p>
     </section>
-    <section id="structure__myacc" role="doc-structure">
-        <h3>3.2. Log In Page</h3>
-    </section>
-    <section id="structure__myacc_logged" role="doc-structure">
-        <h4>3.2.1. The user is logged in</h4>
-        <p>The user will be able to log in trought the "Log in" button in the navigation bar, he will use the credentials that he used for his registration. After the user is logged in he may get out of his account using the "Log off " button that will only appear after he is logged in.Favorites section will also appear after the user is in his account.</p>
+    <section id="structure__register" role="doc-structure">
+        <h3>3.2. Register</h3>
+        <p>In there, the user can create a new account by completing the required fields with valid informations. If everything is valid, a new user entry will be created in the database. Then, the users can use the Login Button to go back to the Login Page</p>
     </section>
     <section id="structure__creationpage" role="doc-structure">
         <h3>3.3. Register Page</h3>
