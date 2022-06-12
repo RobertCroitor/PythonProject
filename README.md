@@ -99,23 +99,23 @@
         <p>In there, the user will be abble to see his account details, like Profile Picture, Description, and Username. While on that page, the user have 5 more buttons availeable to use. </p>
     </section>
     <section id="structure__myProfile_gallery" role="doc-structure">
-        <h3>3.6.1 User Gallery</h3>
+        <h4>3.6.1 User Gallery</h4>
         <p>In there, the user will be abble to see his uploaded containers. </p>
     </section>
     <section id="structure__myProfile_description" role="doc-structure">
-        <h3>3.6.2 Change Description</h3>
+        <h4>3.6.2 Change Description</h4>
         <p>Using this button, the user will be redirected to a new form that allows him to input a new description for his profile.</p>
     </section>
     <section id="structure__myProfile_picture" role="doc-structure">
-        <h3>3.6.3 Change Picture</h3>
+        <h4>3.6.3 Change Picture</h4>
         <p>Using this button, the user will be redirected to a new form that allows him to input a new photo url in order to change his profile picture.</p>
     </section>
     <section id="structure__myProfile_csv" role="doc-structure">
-        <h3>3.6.4 Download CSV</h3>
+        <h4>3.6.4 Download CSV</h4>
         <p>Using this button, a CSV file containing all the user uploaded containers informations will be downloaded</p>
     </section>
     <section id="structure__myProfile_pdf" role="doc-structure">
-        <h3>3.6.5 Download PDF</h3>
+        <h4>3.6.5 Download PDF</h4>
         <p>Using this button, a PDF file containing all the user uploaded containers informations will be downloaded</p>
     </section>
     <section id="structure__top10" role="doc-structure">
