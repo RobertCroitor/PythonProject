@@ -126,37 +126,37 @@
         <h3>3.6. Profiles</h3>
         <p>Using the Profiles button, present on the navigation bar, the user will be redirected to a new page, containing all the users that are currently registered on the websit, along with their profile picture.</p>
     </section>
+    <h3>3.3. Admin Page</h3>
+        <p>If the user have admin privileges, he can acces the admin page, where he can user commands like delete user and delete photo </p>
+    </section>
         <h2>4. Use cases</h2>
     </section>
-    <section id="use-cases__newsystem" role="doc-structure">
-        <h3>4.1. The user searches for a new recipe</h3>
-        <p>When the user will access the "Recipe" panel he will be able to input some ingredients and the website will provide him with  a list of recipes that contains those ingredients.The different filters will allow the user to select what kind of recipe he will get.</p>
+    <section id="use-cases__filter" role="doc-structure">
+        <h3>4.1. The user wants to see only details about Casks</h3>
+        <p>After logging in, the user can use the Filter button in the navigation menu , hover over Types and then click on Cask in order to be redirected to a page that shows only details about Casks</p>
     </section>
-    <section id="use-cases__viewsystem" role="doc-structure">
-        <h3>4.2. The user adds a Recipe of its own</h3>
-        <p>In the "Add Recipe" panel the user will input his own recipe as well as categorize it himself, depending on its difficulty, time spent and ingredients.</p>
+    <section id="use-cases__logout" role="doc-structure">
+        <h3>4.2. The user wants to logout</h3>
+        <p>After loggin in, the user can use the LogOut button in the navigation menu in order to log out of his account</p>
     </section>
-    <section id="use-cases__modifydeletesystem" role="doc-structure">
-        <h3>4.3. The user logs in into an existing account</h3>
-        <p>Here the user inputs his credentials so he log in with his account after this he can see his favorite recepies or he log out if he wants too.</p>
+    <section id="use-cases__delete" role="doc-structure">
+        <h3>4.3. The user want to delete a specific photo</h3>
+        <p>After loggin in, if the user have admin privileges, he can acces the Admin page, and complete the Delete Photo form in order to delete a specific container</p>
     </section>
-    <section id="use-cases__adminpanel" role="doc-structure">
-        <h3>4.4. The user creates an account</h3>
-        <p>The user can choose to create an account after this he will be sent to the login page where he can login.</p>
+    <section id="use-cases__login" role="doc-structure">
+        <h3>4.4. The user wants to login</h3>
+        <p>While on the login page, the user can input his account details in order to login. If he uses a name that is not registered, he will be propmted with a "Wrong Username" message. If he does not complete a field, a message saying "No empty field is allowed" will be showed. If he uses a password that does now match the username password present in the database, a message saying that the password is incorrect will be shown. If everything is ok, the user will be logged in</p>
     </section>
-    <section id="use-cases__datasystem" role="doc-structure">
-        <h3>4.5. he user uses the admin privileges to delete a recipe or a recipe image</h3>
-        <p>If an user is an admin he has access to "delete a recipe" option or "delete an image" option, the normal user cannot perform this action.</p>
-    </section>
+    
     <section id="implementations" role="doc-structure">
-     <section id="use-cases__datasystem" role="doc-structure">
+     <section id="use-cases__documentation" role="doc-structure">
         <h3>5. Documentation</h3>
-        <p>The user can register with an unique name(in the server will be verified if it is unique) he will be redirected to the login page where he will be able to login.We verify in our datat base if that user exists and we will compare his input password with the password that has been decrypted from data base.If they both match we will send a JWT token to the front end.The token will contain if the user is an admin or not.</p>
-        <p> For our routing we have used as a documentation the folowing repository <a>https://github.com/stefanT9/Routing-In-NodeJs</a></p>
-        <p>For jwt token we used <a>https://www.npmjs.com/package/jsonwebtoken</a></p>
-        <p>The search component we have used commas to separate ingredients and then we make a POST type request in the data base(the ingredients and the token will be sent).In the data base we look after the recipies that only contain those ingredients.For typo corection we used Propose <a>https://www.npmjs.com/package/propose</a> wich will compare each ingredient from one existent in the data base.If its close to matching they will corect the word if it doesnt the word will be left as it is.The token will be verified to see if the user is logged in as an admin or logged in at all.The recipies will be sorrted by ingredients count and then we will wrap aditional information(like if the user is logged in, the name of the user, etc).Based on the response from the server the user will have the option to delete a recipe or a recipe image.</p>
-        <p>The add favorite component will increase the popularity of a receipe and they will be saved in the field of "Favorites" of user in the Data Base.</p>
-        <p>Any logged user cand add an image with their finished receipe.We used formidable to parse the files and interpret them in the server side<a>https://www.npmjs.com/package/formidable</a>.An admin can delete an existing photo making a post rewuest to the server sending it the recipe name and the photo name</p>
+        <p>The user can register only using unique names and emails. After registering, the user password will be encrypted and sent to the database. While trying to login, the user inputed password will be encrypted and compared to the one present in the database</p>
+        <p> For routing, we used HTTP protocols</p>
+        <p>For encryption we used a custom made alhorithm</p>
+        <p>In order to retrieve data from the database we used the Fetch function.</p>
+        
+        <p>In order to add a image, the user have to input the Image Url</p>
     </section>
     <section id="implementations" role="doc-structure">
     </header>
