@@ -57,22 +57,22 @@
     </div>
     <section id="project-details" role="doc-abstract">
         <h2>1. Project details</h2>
-        <p>Se doreste creare unei aplicatii de retete culinare care permite sugerarea de retete pe baza unor ingrediente minimizand numarul de ingrediente suplimentare necesare. Un utilizator va putea adauga retete (ingrediente, pasi de preparare, dificultate, durata preparare, durata finalizare). Vizitatorii pot cauta retete introducand ingredientele pe care le au la dispozitie si o serie de alte criterii suplimentare, cum ar fi: ingrediente suplimentare indezirabile, dificultate, durata preparare, durata finalizare etc.). Lista rezultatelor va putea fi ordonata dupa diverse criterii: popularitate, durata preparare, durata finalizare, dificultate. Utilizatorul poate alege sa marcheze ca a preparat o retata adaugand minim o fotografie cu rezultatul final (in acest fel este determinata popularitate unei retete). Daca utilizatorul care cauta o reteta nu este autentificat, atunci preferintele ultimei cautari vor fi salvate la nivel de browser, altfel in contul utilizatorului respectiv. Se vor oferi clasamente in formatele HTML, CSV si JSON cu cele mai populare retete, cele mai populare ingrediente, ingredientele cele mai evitate.</p>
+        <p>Sa se dezvolte o aplicatie Web destinata colectionarilor de recipiente (sticle, clondire, butelii, damigene, butelci,...). Pe baza facilitatilor de cautare multi-criteriala implementate, utilizatorii autentificati vor putea crea, inventaria si partaja (sub)colectii de recipiente in functie de diverse caracteristici (tip, imagine, valoare, tara, perioada de utilizare, istoric, existenta etichetei etc.), plus vor putea importa/exporta datele referitoare la recipientele detinute. Se vor genera statistici diverse ce pot fi exportate in formate deschise – minimal, CSV si PDF. Se va realiza, de asemenea, un clasament al celor mai populare recipiente, disponibil si ca flux de date RSS.</p>
     </section>
     <section id="introduction" role="doc-introduction">
         <h2>2. Introduction</h2>
-        <p>WhaF was implemented by Bogdan Puiu and Bogdan Tudor-Cristian, two students of Faculty of computer Scuence and its main role is to help people find easy recipes based on they ingredients they have at hand.</p>
+        <p>ColB is a Web Page designed for storing and sharing all kind of beverage containers. Users can store their containers in here, giving details about them. Also, they can see others uploads and check their details</p>
     </section>
     <section id="introduction__project" role="doc-introduction">
         <h3>2.1. The Project</h3>
-        <p>Whaf is a website that allows people to input some ingredients and find a recipe that they like, this help people that are not familiar with cooking make amazing meals and learn something new</p>
-        <p>Throught a personalized search the user can find the recipe with a minimum numbers of steps, he can also search filtering the search results base on time spent, dificulty and number of steps.</p>
-        <p>He also has the posibility of saving his favorite recepies using the "Favorites" function.</p>
-        <p>The user also has the posibility of creating an account so he can see his favorite recipies. If he doesnt have oen he can create one.</p>
+        <p>ColB is a website that allows users to upload their beverage containers and see what other users collected</p>
+        <p>Users can see all the uploaded containers in the main page and also can filter them using different filters</p>
+        <p>They can also export their containers in CSV and PDF formats</p>
+        <p>Every user has to be registered in order to use the web app</p>
     </section>
     <section id="structure" role="doc-structure">
         <h2>3. User Interface</h2>
-        <p>Every page has a very intuitive navigation bar that will help the user easily navigate trought the website. Also the pages have very easy to understand functions that help the user easily manipulate the website for its intendet purpose.</p>
+        <p>On every page there is a navigation bar that helps the user easily navigate around our page</p>
     </section>
     <section id="structure__landing" role="doc-structure">
         <h3>3.1. Home Page</h3>
