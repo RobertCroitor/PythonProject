@@ -162,6 +162,6 @@
         <p>In order to add a image, the user have to input the Image Url</p>
     </section>
    
-
+</header>
 </body>
 </html>
