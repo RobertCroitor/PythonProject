@@ -27,7 +27,7 @@
             </ol>
             <li><a href="#3-user-interface">User Interface</a>
                 <ol role="structure-directory">
-                    <li><a href="#31-landing-page">Landing Page</a></li>
+                    <li><a href="#31-structure-login">Landing Page</a></li>
                     <li><a href="#32-my-account-page">Log In</a></li>
                     <ol>
                         <li><a href="#321-the-user-is-logged-in">The user is logged in</a></li>
@@ -148,7 +148,7 @@
         <p>While on the login page, the user can input his account details in order to login. If he uses a name that is not registered, he will be propmted with a "Wrong Username" message. If he does not complete a field, a message saying "No empty field is allowed" will be showed. If he uses a password that does now match the username password present in the database, a message saying that the password is incorrect will be shown. If everything is ok, the user will be logged in</p>
     </section>
      <section id="use-cases__documentation" role="doc-structure">
-        <h3>5. Documentation</h3>
+        <h2>5. Documentation</h2>
         <p>The user can register only using unique names and emails. After registering, the user password will be encrypted and sent to the database. While trying to login, the user inputed password will be encrypted and compared to the one present in the database</p>
         <p> For routing, we used HTTP protocols</p>
         <p>For encryption we used a custom made alhorithm</p>
