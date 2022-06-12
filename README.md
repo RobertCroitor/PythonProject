@@ -19,11 +19,11 @@
         </dl>
     <div role="contentinfo">
         <ol role="directory">
-            <li><a href="#1-project-details">Project Details</a> </li>
+            <li><a href="#1-project__details">Project Details</a> </li>
             <li><a href="#2-introduction">Introduction</a> </li>
             <ol>
                 <li><a href="#21-the-project">The Project</a></li>
-                <li><a href="#22-the-gamification-system">What the Food</a></li>
+                <li><a href="#22-the-gamification-system">/a></li>
             </ol>
             <li><a href="#3-user-interface">User Interface</a>
                 <ol role="structure-directory">
