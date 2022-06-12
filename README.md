@@ -46,11 +46,10 @@
             </li>
             <li><a href="#4-use-cases">Use-cases</a>
             <ol>
-                <li><a href="#41-the-user-creates-a-new-gamification-system">The user searches for a new recipe</a></li>
-                <li><a href="#42-the-user-views-one-of-his-gamification-systems">The user adds a new recipe</a></li>
-                <li><a href="#43-the-user-modifies/deletes-one-of-his-gamification-systems">The user logs in into an existing account</a></li>
-                <li><a href="#44-the-user-wants-to-access-the-admin-panel">The user using the register option</a></li>
-                <li><a href="#45-the-user-wants-to-access/post-data-about-a-gamification-system">The user uses the admin privileges to delete a recipe or a recipe image</a></li>
+                <li><a href="#41-use-cases__filter">Filtering</a></li>
+                <li><a href="#42-use-cases__logout">LogOut</a></li>
+                <li><a href="#43-use-cases__delete">Delete Container</a></li>
+                <li><a href="#44-use-cases__login">Login</a></li>     
             </ol>
             </li>
             <ol>
