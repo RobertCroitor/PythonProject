@@ -79,24 +79,52 @@
         <p>In there, the user have to input his login creditentials in order to get acces to our webpage. Their inputs are compared to the ones presend in the user database, and if everything matches, they get acces. If something is wrong, a message will be shown so the users know what they inputed wrong. If the user does not have an account, they can use the Register Button to be redirected to the Register Page</p>
     </section>
     <section id="structure__register" role="doc-structure">
-        <h3>3.2. Register</h3>
+        <h3>3.2. Register Page</h3>
         <p>In there, the user can create a new account by completing the required fields with valid informations. If everything is valid, a new user entry will be created in the database. Then, the users can use the Login Button to go back to the Login Page</p>
     </section>
-    <section id="structure__creationpage" role="doc-structure">
-        <h3>3.3. Register Page</h3>
-        <p>If the user doesnt have an account he can create one using unique credentials. After he created an account he will be redirected to the login page so he can login with his new credentials.</p>
+    <section id="structure__home" role="doc-structure">
+        <h3>3.3. Home Page</h3>
+        <p>After logging in, the user will be greeted by a nice welcome page. After clicking on the page, the user will be redirected to the Main Page</p>
     </section>
-    <section id="structure__viewpage" role="doc-structure">
-        <h3>3.4.Search Page</h3>
-        <p>The user here can search a recipe based on the ingredients he has. He can searhc recipes based on time, dificulty, number of steps and popularity.Also each recipe can be added to the favorite list of the user, an image can added by the user.</p>
+    <section id="structure__products" role="doc-structure">
+        <h3>3.4.Main Page</h3>
+        <p>In there, the user can see all the uploaded containers that are stored on our webpage. By hovering a container, it will rotate, so the user can see all the informations about that specific container on the back of the card. While hovering , the user can also use the Like Button present there in order to Like that specific container. If the vote is succesfull the user will be redirected to a page in which he hasa back button</p>
     </section>
-    <section id="structure__modifypage" role="doc-structure">
-        <h3>3.5. Ad a Recipe Page</h3>
-        <p>If the user wishes so he can add a recipe of its own. This can be done by completing all the forms with the necesary information that is needed for that recipe.</p>
+    <section id="structure__filters" role="doc-structure">
+        <h3>3.5. Filtered Page</h3>
+        <p>While the user is on the Main Page or another Filtered Page, he can use the Filter Button present in the Navigation Bar in order to select one of the filters that we provide, so he can see only a specific category of containers. Some filters that we provide are : Type, Price, Origin, Condition, Present Label.</p>
     </section>
-    <section id="structure__documentationpage" role="doc-structure">
-        <h3>3.6. Admin Options</h3>
-        <p>If the user is an admin of the page he will be able to both delete recipes so that they dont appear as a search result in the search page and delete a photo that has been added in a recipe section.</p>
+    <section id="structure__myProfile" role="doc-structure">
+        <h3>3.6. User Profile</h3>
+        <p>In there, the user will be abble to see his account details, like Profile Picture, Description, and Username. While on that page, the user have 5 more buttons availeable to use. </p>
+    </section>
+    <section id="structure__gallery" role="doc-structure">
+        <h3>3.6.1 User Gallery</h3>
+        <p>In there, the user will be abble to see his uploaded containers. </p>
+    </section>
+    <section id="structure__description" role="doc-structure">
+        <h3>3.6.2 Change Description</h3>
+        <p>Using this button, the user will be redirected to a new form that allows him to input a new description for his profile.</p>
+    </section>
+    <section id="structure__picture" role="doc-structure">
+        <h3>3.6.3 Change Picture</h3>
+        <p>Using this button, the user will be redirected to a new form that allows him to input a new photo url in order to change his profile picture.</p>
+    </section>
+    <section id="structure__csv" role="doc-structure">
+        <h3>3.6.4 Download CSV</h3>
+        <p>Using this button, a CSV file containing all the user uploaded containers informations will be downloaded</p>
+    </section>
+    <section id="structure__csv" role="doc-structure">
+        <h3>3.6.5 Download PDF</h3>
+        <p>Using this button, a PDF file containing all the user uploaded containers informations will be downloaded</p>
+    </section>
+    <section id="structure__top10" role="doc-structure">
+        <h3>3.6. Top 10</h3>
+        <p>Using the Top10 button, present on the navigation bar, the user will be redirected to a new page, containing the top 10 most liked containers on the page.</p>
+    </section>
+    <section id="structure__users" role="doc-structure">
+        <h3>3.6. Profiles</h3>
+        <p>Using the Profiles button, present on the navigation bar, the user will be redirected to a new page, containing all the users that are currently registered on the websit, along with their profile picture.</p>
     </section>
         <h2>4. Use cases</h2>
     </section>
