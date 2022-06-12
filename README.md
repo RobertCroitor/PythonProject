@@ -22,21 +22,26 @@
             <li><a href="#1-project__details">Project Details</a> </li>
             <li><a href="#2-introduction">Introduction</a> </li>
             <ol>
-                <li><a href="#21-the-project">The Project</a></li>
-                <li><a href="#22-the-gamification-system">/a></li>
+                <li><a href="#21-introduction__project">The Project</a></li>
             </ol>
             <li><a href="#3-user-interface">User Interface</a>
                 <ol role="structure-directory">
-                    <li><a href="#31-structure-login">Landing Page</a></li>
-                    <li><a href="#32-my-account-page">Log In</a></li>
+                    <li><a href="#31-structure__login">Login</a></li>
+                    <li><a href="#32-structure__register">Register</a></li>
+                    <li><a href="#33-structure__home">Home Page</a></li>
+                    <li><a href="#34-structure__products">Main Page</a></li>
+                    <li><a href="#35-structure__filters">Filters</a></li>
+                    <li><a href="#36-structure__myProfile">Admin options</a></li>
                     <ol>
-                        <li><a href="#321-the-user-is-logged-in">The user is logged in</a></li>
-                        <li><a href="#322-the-user-is-not-logged-in">The user is not logged in</a></li>
+                        <li><a href="#361-structure__myProfile_gallery">User Gallery</a></li>
+                        <li><a href="#362-structure__myProfile_description">Change Description</a></li>
+                        <li><a href="#363-structure__myProfile_picture">Change Picture</a></li>
+                        <li><a href="#364-structure__myProfile_csv">Download CSV</a></li>
+                        <li><a href="#365-structure__myProfile_pdf">Download PDF</a></li>
                     </ol>
-                    <li><a href="#33-gamification-system-creation-page">Register Page</a></li>
-                    <li><a href="#34-gamification-system-view-page">Search Page</a></li>
-                    <li><a href="#35-gamification-system-modify-page">Add Recipe Page</a></li>
-                    <li><a href="#37-admin-panel">Admin options</a></li>
+                     <li><a href="#37-structure__top10">Top 10</a></li>
+                    <li><a href="#38-structure__users">Profiles</a></li>
+                    <li><a href="#39-structure__admin">Admin Page</a></li>
                 </ol>
             </li>
             <li><a href="#4-use-cases">Use-cases</a>
@@ -119,14 +124,15 @@
             <p>Using this button, a PDF file containing all the user uploaded containers informations will be downloaded</p>
         </section>
         <section id="structure__top10" role="doc-structure">
-            <h3>3.6. Top 10</h3>
+            <h3>3.7. Top 10</h3>
             <p>Using the Top10 button, present on the navigation bar, the user will be redirected to a new page, containing the top 10 most liked containers on the page.</p>
         </section>
     <section id="structure__users" role="doc-structure">
-        <h3>3.6. Profiles</h3>
+        <h3>3.8. Profiles</h3>
         <p>Using the Profiles button, present on the navigation bar, the user will be redirected to a new page, containing all the users that are currently registered on the websit, along with their profile picture.</p>
     </section>
-    <h3>3.3. Admin Page</h3>
+    <section id="structure__admin" role="doc-structure">
+    <h3>3.9. Admin Page</h3>
         <p>If the user have admin privileges, he can acces the admin page, where he can user commands like delete user and delete photo </p>
     </section>
         <h2>4. Use cases</h2>
