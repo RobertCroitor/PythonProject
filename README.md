@@ -148,7 +148,7 @@
         <p>While on the login page, the user can input his account details in order to login. If he uses a name that is not registered, he will be propmted with a "Wrong Username" message. If he does not complete a field, a message saying "No empty field is allowed" will be showed. If he uses a password that does now match the username password present in the database, a message saying that the password is incorrect will be shown. If everything is ok, the user will be logged in</p>
     </section>
     
-    <section id="implementations" role="doc-structure">
+    <section id="documentation" role="doc-structure">
         <h3>5. Documentation</h3>
         <p>The user can register only using unique names and emails. After registering, the user password will be encrypted and sent to the database. While trying to login, the user inputed password will be encrypted and compared to the one present in the database</p>
         <p> For routing, we used HTTP protocols</p>
